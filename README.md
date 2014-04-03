@@ -6,6 +6,6 @@ node-tailer
 ## installation
 
 * get [nodejs](http://nodejs.org/) and npm(shipped with nodejs)
-* `npm install --production` to install deps
-* `npm start` or `PORT=8000 npm start` to launch the tail-server (0.0.0.0:3000 by default)
+* `npm install node-tailer -g` to install it
+* `node-tailer` or `PORT=8000 node-tailer` to launch the tail-server (0.0.0.0:3000 by default)
 * heads to you browser
