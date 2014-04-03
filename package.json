@@ -2,6 +2,7 @@
   "name": "node-tailer",
   "version": "0.0.0",
   "description": "tail logs & processes in browser (at your own risk)",
+  "repository": "git@github.com:layerssss/node-tailer.git",
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/iced server.iced",
