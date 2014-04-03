@@ -108,4 +108,4 @@ io.sockets.on 'connection', (socket)->
 
 await server.listen Number(process.env.APP_PORT||process.env.PORT)||3000, process.env.APP_ADDR||'0.0.0.0', defer e
 throw e if e
-console.log "ready to tail on #{server.address().address}:#{server.address().port}"
+console.log "ready to tail on http://#{server.address().address}:#{server.address().port}/"
