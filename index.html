@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="tailer.js"></script>
+  <style type="text/css">
+    pre{
+      margin: 0;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+    a{
+      color: white;
+    }
+    body{
+      color: white; 
+      background-color: #000;
+    }
+    .msg{
+      color: yellow;
+    }
+    .stderr{
+      color: red;
+    }
+    .footer{
+      height: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="nocmd">
+    <p>to setup a new commands:</p>
+    <pre>
+    mkdir -p ~/.node-tailer
+    echo "tail -f /var/log/nginx/access.log" > ~/.node-tailer/nginx-access-log
+    chmod +x ~/.node-tailer/nginx-access-log
+    </pre>
+  </div>
+  <p>commands:</p>
+  <div class="cmds">Loading..</div>
+  <div class="footer">
+  </div>
+</body>
+</html>

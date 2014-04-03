@@ -1,0 +1,16 @@
+{
+  "name": "node-tailer",
+  "version": "0.0.0",
+  "description": "tail logs & processes in browser (at your own risk)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/iced server.iced",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Yin",
+  "license": "MIT",
+  "dependencies": {
+    "iced-coffee-script": "^1.7.1-b",
+    "socket.io": "^0.9.16"
+  }
+}
