@@ -49,6 +49,7 @@ module.exports = class Server
           $ ->
             $.getJSON '.', (cmds)->
               $('.cmds').html ''
+              $('.nocmd').hide() if cmds.length
               for cmd in cmds
                 $(document.createElement 'a')
                   .text cmd
@@ -83,6 +84,8 @@ module.exports = class Server
                 $ pend document.createElement 'pre'
                   .addClass 'msg'
                   .text 'error starting ' + cmd + ': ' + message
+            unless location.hash == '#noheader'
+              $('.cmds, .cmds-label').show()
 
         """
       rs.writeHead 404
