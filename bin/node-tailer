@@ -1,3 +1,11 @@
 #!/usr/bin/env node
 require("iced-coffee-script").register();
-require('../server.iced');
+var Server = require('../server.iced');
+var server = new Server();
+
+server.init({}, function(e){
+  if(e) throw(e);
+  server.listen(Number(process.env.APP_PORT||process.env.PORT)||3000, process.env.APP_ADDR||'0.0.0.0', function(e){
+    if(e) throw(e);
+  })
+});
