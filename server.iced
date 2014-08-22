@@ -91,7 +91,7 @@ module.exports = class Server
       rs.writeHead 404
       rs.end "Not Found"
 
-    io = socket_io.listen @server
+    io = socket_io.listen @server, log: false
     io.sockets.on 'connection', (socket)->
       socket.on 'tail', (cmd)->
         await fs.readdir options.dir, defer e, cmds
